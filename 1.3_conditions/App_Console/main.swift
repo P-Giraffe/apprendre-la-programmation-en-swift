@@ -13,10 +13,12 @@ let age:Int
 age = Utilisateur.saisirEntier()
 print("Age : \(age)")
 
-if age < 12 {
+if age > 0 && age < 12 {
     print("Vous êtes un enfant")
 } else if age < 18 {
     print("Vous êtes un adolescent")
+} else if age <= 0 || age > 120 {
+    print("Âge incorrect")
 } else {
     print("Vous êtes un adulte")
 }
