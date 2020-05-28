@@ -9,10 +9,15 @@
 import Foundation
 
 //Exemple de génération de nombre aléatoire
-let nombreAleatoire = Math.nombreAleatoire(comprisEntre: 1, et: 100)
+var nombreAleatoire = Math.nombreAleatoire(comprisEntre: 1, et: 100)
 print(nombreAleatoire)
 for numeroTour in 0..<nombreAleatoire {
     print("Coup de pelle numéro \(numeroTour)")
+}
+
+while nombreAleatoire > 1 {
+    nombreAleatoire = nombreAleatoire - 1
+    print(nombreAleatoire)
 }
 
 
