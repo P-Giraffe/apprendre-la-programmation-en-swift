@@ -9,17 +9,26 @@
 import Foundation
 
 //Exemple de génération de nombre aléatoire
-var nombreAleatoire = Math.nombreAleatoire(comprisEntre: 1, et: 100)
-print(nombreAleatoire)
-for numeroTour in 0..<nombreAleatoire {
-    print("Coup de pelle numéro \(numeroTour)")
-}
+//var nombreAleatoire = Math.nombreAleatoire(comprisEntre: 1, et: 100)
+//print(nombreAleatoire)
+//for numeroTour in 0..<nombreAleatoire {
+//    print("Coup de pelle numéro \(numeroTour)")
+//}
+//
+//while nombreAleatoire > 1 {
+//    nombreAleatoire = nombreAleatoire - 1
+//    print(nombreAleatoire)
+//}
+var age:Int
+repeat {
+    print("Entrez votre age : ")
+    age = Utilisateur.saisirEntier()
+    if age <= 0 || age > 120 {
+        print("Cet âge ne semble pas valide")
+    }
+} while age <= 0 || age > 120
 
-while nombreAleatoire > 1 {
-    nombreAleatoire = nombreAleatoire - 1
-    print(nombreAleatoire)
-}
-
+print("Age : \(age)")
 
 //Exemples de saisies utilisateur
 //print("Entrez votre prénom : ")
@@ -27,10 +36,7 @@ while nombreAleatoire > 1 {
 //texte = Utilisateur.saisirTexte()
 //print("Bonjour \(texte)")
 //
-//print("Entrez votre age : ")
-//let age:Int
-//age = Utilisateur.saisirEntier()
-//print("Age : \(age)")
+
 //
 //print("Entrez une note : ")
 //let note:Double
