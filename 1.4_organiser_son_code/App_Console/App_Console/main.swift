@@ -7,9 +7,16 @@
 //
 import Foundation
 
-//Exemple de génération de nombre aléatoire
-let nombreAleatoire = Math.nombreAleatoire(comprisEntre: 1, et: 100)
-print(nombreAleatoire)
+func fonctionPrincipale() {
+    //Exemple de génération de nombre aléatoire
+    let nombreAleatoire = Math.nombreAleatoire(comprisEntre: 1, et: 100)
+    print(nombreAleatoire)
+    
+    demanderPrenom()
+    demanderPrenom()
+}
+fonctionPrincipale()
+
 
 func demanderPrenom() {
     //Exemples de saisies utilisateur
@@ -19,6 +26,5 @@ func demanderPrenom() {
     print("Bonjour \(texte)")
 }
 
-demanderPrenom()
-demanderPrenom()
+
 
