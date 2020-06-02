@@ -8,9 +8,20 @@
 
 import Foundation
 
+func demanderNomUtilisateur() -> String {
+    var nomUtilisateur:String
+    repeat {
+        print("Entrez votre nom : ")
+        nomUtilisateur = Utilisateur.saisirTexte()
+        if nomUtilisateur.count < 3 || nomUtilisateur.count > 20 {
+            print("Le nom d'utilisateur doit être compris entre 3 et 20 caractères, vous en avez saisi \(nomUtilisateur.count)")
+        }
+    } while nomUtilisateur.count < 3 || nomUtilisateur.count > 20
+    return nomUtilisateur
+}
+
 func menu() {
-    print("Entrez votre nom : ")
-    let nomUtilisateur = Utilisateur.saisirTexte()
+    let nomUtilisateur = demanderNomUtilisateur()
     print("Bonjour \(nomUtilisateur)")
 
     var choixUtilisateur:Int

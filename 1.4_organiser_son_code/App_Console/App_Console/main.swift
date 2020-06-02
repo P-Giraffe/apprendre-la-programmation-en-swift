@@ -27,8 +27,10 @@ func demanderPrenom() -> String {
     return texte
 }
 
-func direBonjour(prenom:String, age:Int) {
+@discardableResult
+func direBonjour(prenom:String, age:Int) -> Int {
     print("Bonjour \(prenom), \(age) ans")
+    return age
 }
 
 
