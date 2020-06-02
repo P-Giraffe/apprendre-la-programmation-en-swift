@@ -12,17 +12,19 @@ func fonctionPrincipale() {
     let nombreAleatoire = Math.nombreAleatoire(comprisEntre: 1, et: 100)
     print(nombreAleatoire)
     
-    demanderPrenom()
+    let nom = demanderPrenom()
+    print(nom)
 }
 fonctionPrincipale()
 
 
-func demanderPrenom() {
+func demanderPrenom() -> String {
     //Exemples de saisies utilisateur
     print("Entrez votre prénom : ")
     let texte:String
     texte = Utilisateur.saisirTexte()
     direBonjour(prenom: texte, age: 30)
+    return texte
 }
 
 func direBonjour(prenom:String, age:Int) {
