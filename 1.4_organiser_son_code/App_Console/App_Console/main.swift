@@ -13,7 +13,6 @@ func fonctionPrincipale() {
     print(nombreAleatoire)
     
     demanderPrenom()
-    demanderPrenom()
 }
 fonctionPrincipale()
 
@@ -23,7 +22,11 @@ func demanderPrenom() {
     print("Entrez votre prénom : ")
     let texte:String
     texte = Utilisateur.saisirTexte()
-    print("Bonjour \(texte)")
+    direBonjour(prenom: texte, age: 30)
+}
+
+func direBonjour(prenom:String, age:Int) {
+    print("Bonjour \(prenom), \(age) ans")
 }
 
 
