@@ -9,7 +9,9 @@
 import Foundation
 
 func menu() {
-    print("Bonjour")
+    print("Entrez votre nom : ")
+    let nomUtilisateur = Utilisateur.saisirTexte()
+    print("Bonjour \(nomUtilisateur)")
 
     var choixUtilisateur:Int
     repeat {
@@ -23,27 +25,27 @@ func menu() {
         
         switch choixUtilisateur {
         case 1:
-            demarrerPartie()
+            demarrerPartie(nomJoueur: nomUtilisateur)
         case 2:
-            afficherReglages()
+            afficherReglages(nom: nomUtilisateur)
         case 3:
-            afficherMessageFin()
+            afficherMessageFin(utilisateur: nomUtilisateur)
         default:
             break
         }
     } while choixUtilisateur != 3
 }
 
-func demarrerPartie() {
-    print("Début de la partie...")
+func demarrerPartie(nomJoueur:String) {
+    print("Début de la partie pour \(nomJoueur)...")
 }
 
-func afficherReglages() {
-    print("Voici les préférences")
+func afficherReglages(nom:String) {
+    print("\(nom) : voici les préférences")
 }
 
-func afficherMessageFin() {
-    print("Bye bye")
+func afficherMessageFin(utilisateur:String) {
+    print("Bye bye " + utilisateur)
 }
 menu()
 
