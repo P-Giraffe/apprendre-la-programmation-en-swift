@@ -10,6 +10,7 @@ import Foundation
 
 ///# Calcul de moyenne par matière
 func menu() {
+    var notesList:[String:[Double]] = [:]
     print("Bonjour et bienvenue dans votre carnet de notes")
     var userChoice : Int
     repeat {
@@ -22,9 +23,9 @@ func menu() {
         
         switch userChoice {
         case 1:
-            inputNotes()
+            notesList = inputNotes(notesList: notesList)
         case 2:
-            displaySummary()
+            displaySummary(notesList: notesList)
         default:
             break;
         }
@@ -34,11 +35,13 @@ func menu() {
 }
 menu()
 
-func inputNotes() {
+func inputNotes(notesList:[String:[Double]]) -> [String:[Double]] {
+    var newNotesList = notesList
     
+    return newNotesList
 }
 
-func displaySummary() {
+func displaySummary(notesList:[String:[Double]]) {
     
 }
 
