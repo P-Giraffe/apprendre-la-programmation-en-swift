@@ -8,8 +8,7 @@
 import Foundation
 
 func fonctionPrincipale() {
-    tableauxNumerotes()
-    tableauxClesValeurs()
+    tableauxEtFonctions()
 }
 fonctionPrincipale()
 
@@ -49,6 +48,20 @@ func tableauxClesValeurs() {
     for (nomJoueur, score) in scoreJoueurs {
         print(" - \(nomJoueur) : \(score)")
     }
+}
+
+func tableauxEtFonctions() {
+    var listeJoueurs = ["Mario", "Luigi"]
+    listeJoueurs = ajouterJoueur(liste: listeJoueurs)
+    for joueur in listeJoueurs {
+        print(" - " + joueur)
+    }
+}
+
+func ajouterJoueur(liste:[String]) -> [String] {
+    var nouvelleListe = liste
+    nouvelleListe.append("Peach")
+    return nouvelleListe
 }
 
 
