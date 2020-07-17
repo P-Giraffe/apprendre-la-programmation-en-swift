@@ -8,16 +8,36 @@
 import Foundation
 
 func fonctionPrincipale() {
-    var age:Int?
-    repeat {
-        print("Veuillez saisir votre âge :")
-        let ageTexte:String = Utilisateur.saisirTexte()
-        age = Int(ageTexte)
-    } while age <= 0
+    optionnelsValeurParDefaut()
     
 }
 fonctionPrincipale()
 
+
+func optionnelsIfLet() {
+    var age:Int
+    print("Veuillez saisir votre âge :")
+    let ageTexte:String = Utilisateur.saisirTexte()
+    if let ageSaisi:Int = Int(ageTexte) {
+        age = ageSaisi
+    } else {
+        print("Veuillez saisir un entier valide")
+    }
+}
+
+func optionnelsValeurParDefaut() {
+    var age:Int
+    print("Veuillez saisir votre âge :")
+    let ageTexte:String = Utilisateur.saisirTexte()
+    age = Int(ageTexte) ?? 0
+}
+
+func optionnelsEnModeKamikase() {
+    var age:Int
+    print("Veuillez saisir votre âge :")
+    let ageTexte:String = Utilisateur.saisirTexte()
+    age = Int(ageTexte)!
+}
 
 
 
