@@ -8,7 +8,7 @@
 import Foundation
 
 func fonctionPrincipale() {
-    tableauxNumerotes()
+    tableauxClesValeurs()
 }
 fonctionPrincipale()
 
@@ -27,6 +27,13 @@ func tableauxNumerotes() {
     print(amisMario[2])
     amisMario.remove(at: 0)
     print(amisMario[amisMario.count-1])
+}
+
+func tableauxClesValeurs() {
+    var scoreJoueurs:[String:Int] = ["Mario":10, "Luigi":9]
+    print(scoreJoueurs["Mario"])
+    scoreJoueurs["Toad"] = 12
+    scoreJoueurs.removeValue(forKey: "Luigi")
 }
 
 
