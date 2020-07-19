@@ -37,6 +37,29 @@ menu()
 
 func inputNotes(notesList:[String:[Double]]) -> [String:[Double]] {
     var newNotesList = notesList
+    var courseName:String
+    repeat {
+        print("Quelle est la matière pour ces notes ?")
+        courseName = Utilisateur.saisirTexte()
+    } while courseName.count <= 0
+    var notesCount:Int
+    repeat {
+        print("Combien de notes à saisir ?")
+        notesCount = Utilisateur.saisirEntier()
+    } while notesCount < 0
+    
+    if notesCount > 0 {
+        var notesList:[Double] = notesList[courseName] ?? []
+        for noteIndex in 1...notesCount {
+            var note:Double
+            repeat {
+                print("Saisissez la note \(noteIndex)/\(notesCount)")
+                note = Utilisateur.saisirReel()
+            } while note < 0
+            notesList.append(note)
+        }
+        newNotesList[courseName] = notesList
+    }
     
     return newNotesList
 }
