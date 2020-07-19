@@ -65,8 +65,24 @@ func inputNotes(notesList:[String:[Double]]) -> [String:[Double]] {
 }
 
 func displaySummary(notesList:[String:[Double]]) {
-    
+    for (courseName, courseNotesList) in notesList {
+        print("\(courseName) :")
+        print("Nombre de notes : \(courseNotesList.count)")
+        if let average = average(from: courseNotesList) {
+            print("Moyenne : \(average)")
+        }
+    }
 }
 
+func average(from array:[Double]) -> Double? {
+    guard array.count > 0 else { return nil }
+    
+    //let sum = array.reduce(0, +)
+    var sum = 0.0
+    for value in array {
+        sum += value
+    }
+    return sum / Double(array.count)
+}
 
 
