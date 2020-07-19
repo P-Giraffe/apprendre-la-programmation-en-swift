@@ -39,6 +39,11 @@ func optionnelsEnModeKamikase() {
     age = Int(ageTexte)!
 }
 
-
+func getMaxValueFrom(_ array:[Int]?) -> Int? {
+    guard let verifiedArray = array,
+          verifiedArray.count > 0
+          else { return nil }
+    return verifiedArray.max()
+}
 
 
