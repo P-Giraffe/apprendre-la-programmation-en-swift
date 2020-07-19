@@ -39,11 +39,23 @@ func optionnelsEnModeKamikase() {
     age = Int(ageTexte)!
 }
 
+func chainageOptionnel() {
+    print("Tirage de la loterie")
+    var nomGagnant:String? = nil
+    if Int.random(in: 1...1000).isMultiple(of: 7) {
+        print("Bravo vous avez gagné! Entrez votre nom pour célébrer votre victoire : ")
+        nomGagnant = Utilisateur.saisirTexte()
+    }
+    nomGagnant = nomGagnant?.capitalized
+    nomGagnant?.append(" 🎉")
+    if let winner = nomGagnant {
+        print(winner)
+    }
+}
+
 func getMaxValueFrom(_ array:[Int]?) -> Int? {
     guard let verifiedArray = array,
           verifiedArray.count > 0
           else { return nil }
     return verifiedArray.max()
 }
-
-
