@@ -8,11 +8,90 @@
 import Foundation
 
 func fonctionPrincipale() {
-    optionnelsValeurParDefaut()
-    
+    closures_tableaux()
 }
 fonctionPrincipale()
 
+func closures_timer() {
+    print("Bonjour, je vais lancer un timer")
+    Timer.scheduledTimer(withTimeInterval: 3, repeats: false) { (_:Timer) in
+        print("Le timer est terminé")
+    }
+    print("Je viens de lancer un timer")
+}
+
+
+func closures_tableaux() {
+    let notes = [4.6, 7.8, 10.2, 12.4, 17.0, 20.0]
+    let notesEnLettres:[String] = notes.map { (note) -> String in
+        if note < 5 {
+            return "D"
+        } else if note < 10 {
+            return "C"
+        } else if note < 15 {
+            return "B"
+        } else {
+            return "A"
+        }
+    }
+    notesEnLettres.forEach { print($0) }
+    
+    var somme:Double = 0
+    for note in notes {
+        somme = somme + note
+    }
+    
+    somme = notes.reduce(0.0, { (resultatPrecedent:Double, noteSuivante:Double) -> Double in
+        return resultatPrecedent + noteSuivante
+    })
+    
+    somme = notes.reduce(0.0) {$0 + $1}
+
+    let moyenne = somme / Double(notes.count)
+    var auDessusDeLaMoyenne = notes.filter { (noteATester) -> Bool in
+        if noteATester > moyenne {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    auDessusDeLaMoyenne = notes.filter { (noteATester) -> Bool in
+        noteATester > moyenne
+    }
+    
+    auDessusDeLaMoyenne = notes.filter { $0 > moyenne }
+    for note in auDessusDeLaMoyenne {
+        print("Note : \(note)")
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+func typesDeVariables() {
+    let note2:Int
+    let note1:Int = 20
+    note2 = Int(19.5)
+    let note3:Double = Double(note1)
+}
 
 func optionnelsIfLet() {
     var age:Int
