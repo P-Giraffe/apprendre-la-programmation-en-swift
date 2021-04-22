@@ -20,7 +20,11 @@ fonctionPrincipale()
 func dessinerCarreASCII(taille:Int) {
     for numeroDeLigne in 1...taille {
         for numeroDeColonne in 1...taille {
-            print("* ", terminator:"")
+            if numeroDeLigne == 1 || numeroDeLigne == taille || numeroDeColonne == 1 || numeroDeColonne == taille {
+                print("* ", terminator:"")
+            } else {
+                print("# ", terminator:"")
+            }
         }
         print()
     }
