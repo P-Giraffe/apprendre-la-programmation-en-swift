@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F860308C1EB8C99F002BD3BF /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = F860308B1EB8C99F002BD3BF /* Math.swift */; };
+		F89C7AEE291975E400D6A245 /* PointCardinal.swift in Sources */ = {isa = PBXBuildFile; fileRef = F89C7AED291975E400D6A245 /* PointCardinal.swift */; };
 		F8A5D25B1EB8B64000A56D56 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5D25A1EB8B64000A56D56 /* main.swift */; };
 		F8A5D2621EB8B6C600A56D56 /* Utilisateur.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8A5D2611EB8B6C600A56D56 /* Utilisateur.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		F860308B1EB8C99F002BD3BF /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		F89C7AED291975E400D6A245 /* PointCardinal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCardinal.swift; sourceTree = "<group>"; };
 		F8A5D2571EB8B64000A56D56 /* App_Console */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = App_Console; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8A5D25A1EB8B64000A56D56 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		F8A5D2611EB8B6C600A56D56 /* Utilisateur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilisateur.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				F8A5D25A1EB8B64000A56D56 /* main.swift */,
 				F8A5D2611EB8B6C600A56D56 /* Utilisateur.swift */,
 				F860308B1EB8C99F002BD3BF /* Math.swift */,
+				F89C7AED291975E400D6A245 /* PointCardinal.swift */,
 			);
 			path = App_Console;
 			sourceTree = "<group>";
@@ -129,6 +132,7 @@
 			files = (
 				F8A5D25B1EB8B64000A56D56 /* main.swift in Sources */,
 				F860308C1EB8C99F002BD3BF /* Math.swift in Sources */,
+				F89C7AEE291975E400D6A245 /* PointCardinal.swift in Sources */,
 				F8A5D2621EB8B6C600A56D56 /* Utilisateur.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

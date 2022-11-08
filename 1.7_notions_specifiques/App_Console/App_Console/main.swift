@@ -8,9 +8,51 @@
 import Foundation
 
 func fonctionPrincipale() {
-    closures_tableaux()
+    enumerations()
 }
 fonctionPrincipale()
+
+
+func enumerations() {
+    let direction: PointCardinal = .Nord
+    
+    if (direction == .Nord) {
+        print("Passez le bonjour au Père Noël")
+    }
+    
+    switch direction {
+    case .Nord:
+        print("Passez le bonjour au Père Noël")
+    case .Sud:
+        print("Bienvenue au Soleil ☀️")
+    default:
+        print("Vous êtes plutôt Surf ou Ski ?")
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 func closures_timer() {
     print("Bonjour, je vais lancer un timer")
@@ -65,26 +107,6 @@ func closures_tableaux() {
         print("Note : \(note)")
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 func typesDeVariables() {
     let note2:Int
